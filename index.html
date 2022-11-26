@@ -165,29 +165,7 @@
       <p>© <span id="footerDate"></span> Все права защищены</p>
     </footer>
 
-    <script type="text/javascript">
-      const date = new Date();
-      document.querySelector('#footerDate').innerHTML = date.getFullYear();
-    </script>
-
-    <script type="text/javascript">
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-              entries.forEach((entry) => {
-                  if(entry.isIntersecting) {
-                  entry.target.src = entry.target.dataset.src;
-                  observer.unobserve(entry.target);
-                }
-              });
-        },
-        {
-          rootMargin: "50px 0px 0px"
-        }
-      );
-
-      document.querySelectorAll('img').forEach((image) => {
-        imageObserver.observe(image);
-      })
-    </script>
+    <script src="script.js"></script>
 
   </body>
 </html>
